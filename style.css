@@ -2327,6 +2327,9 @@ html.lockPage .productOverview {
 	float: right;
 }
 
+.productTabs {
+}
+
 .productTabs .tabs {
 	position: relative;
 }
@@ -2394,15 +2397,72 @@ html.lockPage .productOverview {
 	padding: 70px 0 50px;
 }
 
- #testimonalRaw {
-	display:block;
+.flexit{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	
 }
 
-.productTabs .tabContent #productDetailsTab .description {
-	
-	max-width: 700px;
-	padding-right: 50px;
+
+@media (min-width: 768px) {
+	.flexit > .descFeat {
+		-ms-flex: 0 0 60%;
+		flex: 0 0 60%;
+		max-width: 60%;
+
+	}
+	.flexit > .testimonial {
+		-ms-flex: 0 0 40%;
+		flex: 0 0 40%;
+		max-width: 40%;
+
+	}
+  }
+  
+  @media (max-width: 767px) {
+	.flexit > .descFeat {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.flexit > .testimonial {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+  }
+
+
+
+.productTabs .tabContent #productDetailsTab .descriptionLeft {
+	float: left;
+	max-width: 692px;
+	padding-right: 60px;
 }
+
+.productTabs .tabContent #productDetailsTab .keyFeatRight {
+	float: left;
+	max-width: 334px;
+}
+
+.productTabs .tabContent #productDetailsTab .descriptionAbove {
+	width:100% !important;
+	padding: 0 30px;
+}
+
+.productTabs .tabContent #productDetailsTab .keyFeatBelow {
+	width:100% !important;
+	padding:20px 50px 50px;
+}
+
+.productTabs .tabContent #productDetailsTab .testimonial {
+	padding: 0 30px;
+	width:100%;
+	margin:auto;
+}
+
 
 .productTabs .tabContent #productDetailsTab .description p {
 	font-size: 14px;
@@ -2411,111 +2471,11 @@ html.lockPage .productOverview {
 }
 
 
-.descFeat{
-	float:left;
-	max-width:500px;
-}
-
-.testimonial{
-	max-width:400px;
-	margin-left:40px;
-	float:left;
-}
-
-
-
-#tQuote:before,
-#tQuote:after {
-	font-style:normal;
-	color: #666666;
-	font-size: 1.5em;
-	opacity: 0.3;
-	
-	font-family: 'Yrsa', Times New Roman, serif;
-}
-
-#tQuote:before {
-	content: '⎡';
-	position: absolute;
-	margin-left: -0.6rem;
-}
-
-#tQuote:after {
-	content: '⎦';
-	margin-top: 0.3rem;
-}
-
-#tQuote{
-	position: relative;
-	margin: 0;
-	padding: 0;
-	font-size: 14px;
-	line-height: 24px;
-	font-style:italic;
-}
-
-#tAuthor{
-	margin-top: 0.8em;
-	position: relative;
-	font-size: 14px;
-	text-align:center;
-	font-weight: 600;
-	line-height: 1;
-}
-#tSource{
-	font-size: 14px;
-	position: relative;
-	line-height: 2;
-	text-align:center;
-	font-weight: 400;
-}
-
-
-#productDetailsTab > div.keyFeatures.keyFeatBelow{
-	max-width: 500px;
-}
-
- .keyFeatBelow ul {
-	display: block;
-	max-width: 480px;
-    margin: 0 auto;
-}
-
-.blockQ{
-	z-index:-1;
-	position: relative;
-}
-
-#wrapper > ul.rslides_tabs.rslides1_tabs {
-	text-align:center;
-}
-
-
-#wrapper > .rslides1_tabs > li{
-	display:inline-block;
-	padding:4px 2px 0px 2px;
-}
-
-
-#wrapper > .rslides1_tabs a{
-	background: #666;
-	opacity: 0.2;
-	color:transparent;
-	display:inline-block;
-	width:30px;
-	height:30px;
-	border-radius:50%;
-	border:10px solid white;
-}
-#wrapper > ul.rslides_tabs.rslides1_tabs > li.rslides_here a{
-	opacity: 0.6;
-}
-
 .productTabs .tabContent #productDetailsTab .keyFeatures li {
 	width: 25%;
 	float: left;
 	text-align: center;
-    padding: 0px 15px;
+    padding: 0 10px 20px;
 }
 
 .productTabs .tabContent #productDetailsTab .keyFeatures li .image {
@@ -2531,6 +2491,136 @@ html.lockPage .productOverview {
     width: auto;
 }
 
+#testimonialSlider.li{
+	display:none;
+}
+
+#testimonialSlider:has(li.rslides1_on) {
+	display:block;
+}
+
+
+
+.tQuote:before,
+.tQuote:after {
+	font-style:normal;
+	color: #666666;
+	font-size: 1.5em;
+	opacity: 0.3;
+	font-family: 'Yrsa', Times New Roman, serif;
+}
+
+.tQuote:before {
+	content: '⎡';
+	position: absolute;
+	margin-left: -0.6rem;
+}
+
+.tQuote:after {
+	content: '⎦';
+	margin-top: 0.3rem;
+}
+
+.tQuote{
+	position: relative;
+	padding: 0;
+	font-size: 14px;
+	line-height: 24px;
+	font-style:italic;
+}
+
+.tAuthor{
+	margin-top: 18px;
+	position: relative;
+	font-size: 14px;
+	text-align:center;
+	font-weight: 600;
+	line-height: 1;
+}
+.tSource{
+	font-size: 14px;
+	position: relative;
+	line-height: 2;
+	text-align:center;
+	font-weight: 400;
+}
+
+.testimonial > ul.rslides_tabs.rslides1_tabs {
+	margin-top:40px; 
+	clear:both;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+/* 	
+	width:100%; */
+}
+
+
+.testimonial > .rslides1_tabs > li{
+	display:inline-block;
+	padding:8px 2px;
+}
+
+
+.testimonial > .rslides1_tabs a{
+	background: #666;
+	opacity: 0.2;
+	color:transparent;
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:10px solid white;
+}
+.testimonial > ul.rslides_tabs.rslides1_tabs > li.rslides_here a{
+	opacity: 0.6;
+}
+
+
+
+/* ORIGINAL START
+
+.productTabs .tabContent #productDetailsTab .description {
+	float: left;
+	width: 692px;
+	padding-right: 60px;
+}
+
+.productTabs .tabContent #productDetailsTab .description p {
+	font-size: 14px;
+	line-height: 24px;
+	padding-bottom: 24px;
+}
+
+.productTabs .tabContent #productDetailsTab .keyFeatures {
+	float: left;
+	width: 334px;
+}
+
+
+.productTabs .tabContent #productDetailsTab .keyFeatures li {
+	width: 25%;
+	float: left;
+	text-align: center;
+    padding: 0 10px 20px;
+}
+
+.productTabs .tabContent #productDetailsTab .keyFeatures li .image {
+	padding-bottom: 10px;
+}
+
+.productTabs .tabContent #productDetailsTab .keyFeatures li .feature {
+	font-size: 10px;
+}
+
+.keyFeatures img {
+    max-height: 55px;
+    width: auto;
+}
+
+ORIGINAL END*/
+
 .threeCols.pair {
 	padding: 0 0 90px;
 }
@@ -2545,10 +2635,9 @@ html.lockPage .productOverview {
 }
 
 .reviewList .review {
-	/*width: 33.3%;*/
 	float: left;
 	padding: 0 25px 0 0;
-}*/
+}
 
 .reviewList .review .title {
 	font-size: 14px;
@@ -3367,7 +3456,7 @@ html.lockPage .productOverview {
 	position: absolute;
 	top:0;
 	left:0;
-	content: '•';
+	content: 'â€¢';
 }
 
 .textPage .col img {
@@ -5535,10 +5624,6 @@ ul.pgwSlider.wide > li, .pgwSlider.wide > ul > li {
     font-size: 12px;
     margin-bottom: -35px;
     padding-top: 20px;
-}
-
-.breadcrumbs ul {
-    
 }
 
 .breadcrumbs li {
