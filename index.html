@@ -1200,8 +1200,21 @@ Calendar._TT["TIME"] = 'Time:';
                                     jQuery("#testimonialSlider").responsiveSlides({
                                     speed: 100,
                                     timeout: 12000,
-                                    pager: true
-                                });
+                                    pager: true,
+                                    nav: false,
+                                    prevText: "",
+                                    nextText: "",
+                                    navContainer: ""           
+                                    });
+
+                                    jQuery("#testimonialSlider").swipe({
+                                        swipeLeft: function(){
+                                         jQuery(".rslides_nav.prev").click();
+                                     },
+                                     swipeRight: function(){
+                                       jQuery(".rslides_nav.next").click();
+                                    }
+                                    });
                                                                     </script>                            </div>
                                                 
                     </div>
