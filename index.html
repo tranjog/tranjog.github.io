@@ -1213,6 +1213,7 @@ Calendar._TT["TIME"] = 'Time:';
 
                                     tSlider.addEventListener('touchstart', function(event) {
                                         touchstartX = event.screenX;
+                                        alert(touchstartX);
                                         swipeCarousel();
                                     }, false);
 
@@ -1222,7 +1223,7 @@ Calendar._TT["TIME"] = 'Time:';
                                     }, false); 
 
                                     function swipeCarousel() {
-                                        alert("click");
+                                       
                                         if (touchendX < touchstartX) {
                                             jQuery(".rslides_nav.prev").click();
                                         }
