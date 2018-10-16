@@ -1212,13 +1212,13 @@ Calendar._TT["TIME"] = 'Time:';
                                     var tSlider = document.getElementById('testimonialSlider');
 
                                     tSlider.addEventListener('touchstart', function(event) {
-                                        touchstartX = event.screenX;
+                                        touchstartX = changedTouches[0].screenX
                                         alert(touchstartX);
                                         swipeCarousel();
                                     }, false);
 
                                     tSlider.addEventListener('touchend', function(event) {
-                                        touchendX = event.screenX;
+                                        touchendX = changedTouches[0].screenX
                                         alert(touchendX);
                                         swipeCarousel();
                                     }, false); 
