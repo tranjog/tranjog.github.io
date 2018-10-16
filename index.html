@@ -1195,44 +1195,27 @@ Calendar._TT["TIME"] = 'Time:';
 
                                      
                                 </ul>
-                                <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                            
                                 <script>                                
-                                    jQuery("#testimonialSlider").responsiveSlides({
-                                    speed: 100,
-                                    timeout: 12000,
-                                    pager: true,
-                                    nav: true,
-                                    prevText: "",
-                                    nextText: "",
-                                    navContainer: ""           
-                                    });
+                                    jQuery("#testimonialSlider").responsiveSlides({speed: 100,timeout: 12000,pager: true,nav: true,prevText: "",nextText: "",navContainer: ""});
+                                    var touchstartX = null; var touchendX = null;
 
-                                    var touchstartX = 0;
-                                    var touchendX = 0;
-                                    var tSlider = document.getElementById('testimonialSlider');
-
-                                    tSlider.addEventListener('touchstart', function(event) {
-                                        touchstartX = event.changedTouches[0].screenX;
-                                        alert(touchstartX);
-                                        swipeCarousel();
+                                    jQuery(".tQuote").addEventListener("touchstart", function(event) {
+                                        touchstartX = event.changedTouches[0].clientX;
+                                        alert("hi");
                                     }, false);
 
-                                    tSlider.addEventListener('touchend', function(event) {
-                                        touchendX = event.changedTouches[0].screenX;
-                                        alert(touchendX);
+                                    jQuery(".tQuote").addEventListener("touchend", function(event) {
+                                        touchendX = event.changedTouches[0].clientX;
                                         swipeCarousel();
                                     }, false); 
 
                                     function swipeCarousel() {
-                                       
-                                        if (touchendX < touchstartX) {
-                                            jQuery(".rslides_nav.prev").click();
-                                        }
-                                        if (touchendX > touchstartX) {
-                                            jQuery(".rslides_nav.next").click();
-                                        }
+                                        if (touchendX < touchstartX) {jQuery(".rslides_nav.prev").click();}
+                                        if (touchendX > touchstartX) {jQuery(".rslides_nav.next").click();}
                                     }
-                                                                    </script>                            </div>
+                                                                    </script>                           
+                                                                    </div>
                                                 
                     </div>
                     <div id="reviewsTab" class="clearfix">
