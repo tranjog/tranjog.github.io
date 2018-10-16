@@ -1201,12 +1201,12 @@ Calendar._TT["TIME"] = 'Time:';
                                     var touchstartX = null; var touchendX = null;
 
                                     document.getElementById('testimonialSlider').addEventListener("touchstart", function(event) {
-                                        touchstartX = event.changedTouches[0].clientX;
+                                        touchstartX = event.changedTouches[0].screenX;
                                         alert(touchstartX);
                                     }, false);
 
                                     document.getElementById('testimonialSlider').addEventListener("touchend", function(event) {
-                                        touchendX = event.changedTouches[0].clientX;
+                                        touchendX = event.changedTouches[0].screenX;
                                         alert(touchendX);
                                         swipeCarousel();
                                     }, false); 
