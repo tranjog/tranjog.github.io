@@ -1206,7 +1206,7 @@ Calendar._TT["TIME"] = 'Time:';
                                     }, false);
 
                                     document.getElementById('tQuote').addEventListener("touchend", function(event) {
-                                        touchendX = event.changedTouches[0].clientX;
+                                        touchendX = event.changedTouches[0].screenX;
                                         alert(touchendX);
                                         swipeCarousel();
                                     }, false); 
