@@ -1200,12 +1200,12 @@ Calendar._TT["TIME"] = 'Time:';
                                     jQuery('#testimonialSlider').responsiveSlides({speed: 100,timeout: 12000,pager: true,nav: true,prevText: "",nextText: "",navContainer: ""});
                                     var touchstartX = null; var touchendX = null;
 
-                                    document.getElementById('testimonialSlider').addEventListener("touchstart", function(event) {
+                                    document.getElementsByClassName('tQuote').addEventListener("touchstart", function(event) {
                                         touchstartX = event.changedTouches[0].screenX;
                                         alert("hi");
                                     }, false);
 
-                                    document.getElementById('testimonialSlider').addEventListener("touchend", function(event) {
+                                    document.getElementById('tQuote').addEventListener("touchend", function(event) {
                                         touchendX = event.changedTouches[0].clientX;
                                         alert("hie");
                                         swipeCarousel();
