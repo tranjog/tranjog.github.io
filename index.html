@@ -1197,15 +1197,15 @@ Calendar._TT["TIME"] = 'Time:';
                                 </ul>
                             
                                 <script>                                
-                                    jQuery("#testimonialSlider").responsiveSlides({speed: 100,timeout: 12000,pager: true,nav: true,prevText: "",nextText: "",navContainer: ""});
+                                    document.getElementById('testimonialSlider').responsiveSlides({speed: 100,timeout: 12000,pager: true,nav: true,prevText: "",nextText: "",navContainer: ""});
                                     var touchstartX = null; var touchendX = null;
 
-                                    jQuery("#testimonialSlider").addEventListener("touchstart", function(event) {
+                                    document.getElementById('testimonialSlider').addEventListener("touchstart", function(event) {
                                         touchstartX = event.changedTouches[0].screenX;
                                         alert("hi");
                                     }, false);
 
-                                    jQuery("#testimonialSlider").addEventListener("touchend", function(event) {
+                                    document.getElementById('testimonialSlider').addEventListener("touchend", function(event) {
                                         touchendX = event.changedTouches[0].clientX;
                                         alert("hie");
                                         swipeCarousel();
