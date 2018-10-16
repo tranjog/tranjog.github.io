@@ -1202,12 +1202,12 @@ Calendar._TT["TIME"] = 'Time:';
 
                                     document.getElementsByClassName('tQuote').addEventListener("touchstart", function(event) {
                                         touchstartX = event.changedTouches[0].screenX;
-                                        alert("hi");
+                                        alert(touchstartX);
                                     }, false);
 
                                     document.getElementById('tQuote').addEventListener("touchend", function(event) {
                                         touchendX = event.changedTouches[0].clientX;
-                                        alert("hie");
+                                        alert(touchendX);
                                         swipeCarousel();
                                     }, false); 
 
