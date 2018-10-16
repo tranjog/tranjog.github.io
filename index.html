@@ -1207,14 +1207,30 @@ Calendar._TT["TIME"] = 'Time:';
                                     navContainer: ""           
                                     });
 
-                                    jQuery("#testimonialSlider").on("swipeleft",function(){
+                                    var touchstartX = 0;
+                                    var touchendX = 0;
+                                    var tSlider = document.getElementById('testimonialSlider');
 
-                                         jQuery(".rslides_nav.prev").click();
-                                     });
+                                    tSlider.addEventListener('touchstart', function(event) {
+                                        touchstartX = event.screenX;
+                                        touchstartY = event.screenY;
+                                    }, false);
 
-                                    jQuery("#testimonialSlider").on("swiperight",function(){
-                                       jQuery(".rslides_nav.next").click();
-                                    });
+                                    tSlider.addEventListener('touchend', function(event) {
+                                        touchendX = event.screenX;
+                                        touchendY = event.screenY;
+                                        swipeCarousel();
+                                    }, false); 
+
+                                    function swipeCarousel() {
+
+                                        if (touchendX < touchstartX) {
+                                            jQuery(".rslides_nav.prev").click();
+                                        }
+                                        if (touchendX > touchstartX) {
+                                            jQuery(".rslides_nav.next").click();
+                                        }
+                                    }
                                                                     </script>                            </div>
                                                 
                     </div>
