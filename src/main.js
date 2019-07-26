@@ -1,8 +1,7 @@
-import createElement from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/createElement';
+import createElement from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/createElement.js';
 import render from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/render';
 import mount from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/mount';
 import diff from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/diff';
-createElement.js
 
 const createVApp = (count) => createElement('div', {
     attrs: {
