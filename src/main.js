@@ -1,17 +1,8 @@
-import createElement from './vdom/createElement';
-import render from './vdom/render';
-import mount from './vdom/mount';
-import diff from './vdom/diff';
-
-// const vApp = {
-//     tagName='div',
-//     attrs:{
-//         id:"app",
-//     },
-//     children: [
-//         'hello world',
-//     ],
-// }
+import createElement from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/createElement';
+import render from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/render';
+import mount from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/mount';
+import diff from 'https://github.com/tranjog/tranjog.github.io/blob/master/src/vdom/diff';
+createElement.js
 
 const createVApp = (count) => createElement('div', {
     attrs: {
